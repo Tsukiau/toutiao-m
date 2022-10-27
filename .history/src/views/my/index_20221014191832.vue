@@ -1,0 +1,125 @@
+<template>
+  <div class="my-container">
+    <!-- 已登录 -->
+    <div class="userInfo header">
+      <!-- 基本信息 -->
+      <div class="base">
+        <div class="left">
+          <van-image fit="cover" src="https://img.yzcdn.cn/vant/cat.jpeg" class="avatar" round />
+          <span class="name">黑马头条</span>
+        </div>
+        <div class="right">
+          <van-button type="default" size="mini" round>编辑资料</van-button>
+        </div>
+      </div>
+      <!-- 粉丝、关注 -->
+      <div class="data">
+        <div class="data-item">
+          <span>90</span>
+          <span>头条</span>
+        </div>
+        <div class="data-item">
+          <span>90</span>
+          <span>关注</span>
+        </div>
+        <div class="data-item">
+          <span>90</span>
+          <span>粉丝</span>
+        </div>
+        <div class="data-item">
+          <span>90</span>
+          <span>获赞</span>
+        </div>
+
+      </div>
+    </div>
+    <div class="grid-nav"></div>
+    <van-cell title="消息通知" is-link url="" />
+    <van-cell title="实名认证" is-link url="" />
+    <van-cell title="用户反馈" is-link url="" />
+    <van-cell title="小智同学" is-link url="" />
+    <van-cell title="系统设置" is-link url="" />
+
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'MyPage',
+  components: {},
+  props: {},
+  data() {
+    return {}
+  },
+  computed: {},
+  watch: {},
+  created() { },
+  mounted() { },
+  methods: {}
+}
+</script>
+
+<style scoped lang="less">
+.my-container {
+  >.header {
+    height: 180px;
+    background: url("~@/assets/banner.png") no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+  }
+
+  .userInfo {
+
+
+    /deep/ .base {
+      width: 100%;
+      height: 115px;
+      padding: 38px 16px 11px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+
+      .left {
+        display: flex;
+        align-items: center;
+
+        .avatar {
+          width: 66px;
+          height: 66px;
+          border: 1px solid #fff;
+        }
+
+        .name {
+          font-size: 15px;
+          margin-left: 11px;
+        }
+      }
+    }
+  }
+}
+.data {
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: space-around;
+  .data-item {
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    span:nth-child(1) {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+    span:nth-child(2) {
+      font-size: 23px;
+    }
+  }
+}
+</style>

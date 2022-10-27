@@ -1,0 +1,4 @@
+import Vue from 'vue'
+import dayjs from 'dayjs'
+import 'dayjs/locale/zh-cn'
+
